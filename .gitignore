@@ -1,0 +1,6 @@
+target/
+.bsp/
+.idea/
+.DS_Store
+logs/
+project/metals.sbt
