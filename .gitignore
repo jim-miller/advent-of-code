@@ -1,6 +1,14 @@
-target/
+.bloop
 .bsp/
+.metals
+
 .idea/
-.DS_Store
+.vscode
+
 logs/
+project/project
+project/target
 project/metals.sbt
+target/
+
+.DS_Store
