@@ -13,7 +13,7 @@ trait Day01[F[_]] {
 object Day01 {
   def make[F[_]: MonadCancelThrow](src: Resource[F, Source]): F[Day01[F]] = {
     src.use { src =>
-      val elfPayloads =
+      val elfTotals =
         src
           .getLines()
           .foldLeft(List.empty[List[Int]]) {
@@ -22,13 +22,13 @@ object Day01 {
             case (l, _)                    => List.empty :: l
           }
           .filterNot(_.isEmpty)
-      val elfTotals = elfPayloads.map(_.sum)
+          .map(_.sum).sorted
 
       new Day01[F] {
         override def part1: F[Answer[Int]] = {
           Answer(
             "How many total Calories is that Elf carrying?",
-            elfTotals.sorted.last
+            elfTotals.last
           ).pure
         }
         override def part2: F[Answer[Int]] =
