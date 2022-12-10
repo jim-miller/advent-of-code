@@ -11,4 +11,6 @@ project/target
 project/metals.sbt
 target/
 
+input.txt
+
 .DS_Store
