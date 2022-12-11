@@ -22,4 +22,10 @@ assert(startOfSignal(ex4) == 11)
 startOfSignal(input)
 
 // part 2
+assert(startOfMessage("mjqjpqmgbljsphdztnvjfqwrcgsmlb") == 19)
+assert(startOfMessage("bvwbjplbgvbhsrlpgdmjqwftvncz") == 23)
+assert(startOfMessage("nppdvjthqldpwncqszvftbrmjlhg") == 23)
+assert(startOfMessage("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg") == 29)
+assert(startOfMessage("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw") == 26)
+
 startOfMessage(input)
